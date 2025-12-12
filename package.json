@@ -3,21 +3,25 @@
   "version": "1.0.0",
   "type": "commonjs",
   "dependencies": {
-    "express": "^4.18.2",
-    "qrcode": "^1.5.3",
-    "pdf-lib": "^1.17.1",
-    "cors": "^2.8.5",
     "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "jimp": "^0.22.0",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.3",
     "qrcode-reader": "^1.0.4"
   },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.js --bundle --platform=node --target=node18 --outfile=dist/index.js",
     "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.27.1"
+  }
 }
