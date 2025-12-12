@@ -1,5 +1,13 @@
 // index.js - FINAL TERIMA BERES (copy replace entire file)
 // deps: npm i express qrcode pdf-lib cors fs path
+// --- Polyfill Node built-ins untuk Cloudflare build ---
+const { Buffer } = require("buffer");
+globalThis.Buffer = globalThis.Buffer || Buffer;
+
+const assert = require("assert");
+globalThis.assert = globalThis.assert || assert;
+
+// --- Main Libraries ---
 const express = require("express");
 const QRCode = require("qrcode");
 const { PDFDocument, StandardFonts, rgb } = require("pdf-lib");
