@@ -29,7 +29,7 @@ export default {
           headers: {
             ...corsHeaders,
             'Content-Type': 'application/pdf',
-            'Content-Disposition': `attachment; filename="${safeName(params.company || 'Visitor')}-${safeName(params.name || 'Card')}.pdf"`
+            'Content-Disposition': `attachment; filename="${safeName(params.company || 'Company')}-${safeName(params.name || 'Name')}-${safeName(params.date || 'Date')}.pdf"`
           }
         });
       }
@@ -487,3 +487,5 @@ function safeName(s) {
     .replace(/[^a-z0-9_\- ]/gi, "_")
     .replace(/\s+/g, "_"); 
 }
+
+// https://visitor-pdf-service.aliphamjah.workers.dev/generate-visitor-card?name=Alip%20Hamjah&visitorNumber=VIS-001&company=Google&date=20-12-2025

@@ -21546,7 +21546,7 @@
             headers: {
               ...corsHeaders,
               "Content-Type": "application/pdf",
-              "Content-Disposition": `attachment; filename="${safeName(params.company || "Visitor")}-${safeName(params.name || "Card")}.pdf"`
+              "Content-Disposition": `attachment; filename="${safeName(params.company || "Company")}-${safeName(params.name || "Name")}-${safeName(params.date || "Date")}.pdf"`
             }
           });
         }
